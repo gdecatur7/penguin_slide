@@ -5,13 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class PenguinController : MonoBehaviour
 {
-    public float walkingSpeed = 1;
+    private float walkingSpeed = 2;
     public GameObject shatterPrefab;
     private float jumpingSpeed = 3;
     public Sprite jumpSprite;
     public Sprite walkSprite;
     public SpriteRenderer sr;
-    //private float animationFPS = 5;
     Rigidbody2D rb2D;
 
     void Start()
@@ -35,10 +34,10 @@ public class PenguinController : MonoBehaviour
         else
         {
             sr.sprite = walkSprite;
-            // note for Katherine: you can add the walking animation here I just did normally walking for now
+        // note for Katherine: you can add the walking animation here I just did normally walking for now
         }
 
-        rb2D.velocity = new Vector2(movement.x, movement.y);
+    rb2D.velocity = new Vector2(movement.x, movement.y);
         transform.right = rb2D.velocity.normalized;
 
     }
