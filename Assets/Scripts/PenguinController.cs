@@ -8,6 +8,9 @@ public class PenguinController : MonoBehaviour
     public float walkingSpeed = 1;
     public GameObject shatterPrefab;
     private float jumpingSpeed = 3;
+    public Sprite jumpSprite;
+    public Sprite walkSprite;
+    public SpriteRenderer sr;
     //private float animationFPS = 5;
     Rigidbody2D rb2D;
 
@@ -27,6 +30,12 @@ public class PenguinController : MonoBehaviour
         if (Input.GetKey(KeyCode.Space))
         {
             movement.y = jumpingSpeed;
+            sr.sprite = jumpSprite;
+        }
+        else
+        {
+            sr.sprite = walkSprite;
+            // note for Katherine: you can add the walking animation here I just did normally walking for now
         }
 
         rb2D.velocity = new Vector2(movement.x, movement.y);

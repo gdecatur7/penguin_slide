@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6372033464896725970}
   - component: {fileID: 7852588598872952847}
-  - component: {fileID: -231806403087925305}
   - component: {fileID: -7454366159051232634}
+  - component: {fileID: 8608585613400042853}
   m_Layer: 0
   m_Name: snowman
   m_TagString: enemy
@@ -86,19 +86,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-231806403087925305
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4285860274883974855}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 199ee4ca46fc8453ab5a0df9b3f5165e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ObsSnowman: {fileID: 0}
 --- !u!60 &-7454366159051232634
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -147,3 +134,21 @@ PolygonCollider2D:
       - {x: 0.42999998, y: -0.59}
       - {x: 0.58, y: -0.32999998}
       - {x: 0.59, y: -0.29999998}
+--- !u!114 &8608585613400042853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4285860274883974855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31d056fd264104c8d981016a9a323df6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  snowManAnimation:
+  - {fileID: 21300000, guid: 7e8714afd06e24a659f1c041f47c2c0e, type: 3}
+  - {fileID: 21300000, guid: 7de047c143ae046f0be88d789286a67c, type: 3}
+  - {fileID: 21300000, guid: 748ec9452f3cd40d69e30be3a7c1ab99, type: 3}
+  - {fileID: 21300000, guid: 4ad81d05716db4b87aed79b684945781, type: 3}
+  sp: {fileID: 7852588598872952847}

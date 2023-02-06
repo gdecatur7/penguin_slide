@@ -6,7 +6,7 @@ public class SnowmanSpawn : MonoBehaviour
 {
     public GameObject ObsSnowman;
     private float timer = 0;
-    private float spawnTimer = 5;
+    private float spawnTimer;
     private float timeMin = 3;
     private float timeMax = 7;
     private float distanceMin = 2;
@@ -21,7 +21,7 @@ public class SnowmanSpawn : MonoBehaviour
         timer -= Time.deltaTime;
         if (timer <= 0)
         {
-            Debug.Log("HERE!");
+            //Debug.Log("HERE!");
             SpawnNewObstacle();
             spawnTimer = Random.Range(timeMin, timeMax);
             timer = spawnTimer;

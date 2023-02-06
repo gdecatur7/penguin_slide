@@ -430,6 +430,7 @@ Transform:
   - {fileID: 1495250095}
   - {fileID: 554015670}
   - {fileID: 1918972903}
+  - {fileID: 538516272}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -558,6 +559,37 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.64, y: 0.64}
   m_EdgeRadius: 0
+--- !u!1 &538516271
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 538516272}
+  m_Layer: 0
+  m_Name: iceblock spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &538516272
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 538516271}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 10.11, y: -1.92, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 130182032}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &554015669
 GameObject:
   m_ObjectHideFlags: 0
@@ -582,7 +614,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 554015669}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.52, y: -0.03, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -897,6 +929,63 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.64, y: 0.64}
   m_EdgeRadius: 0
+--- !u!1001 &851597234
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4285860274883974855, guid: 9bf8de8a01fae4290862c2f823478218, type: 3}
+      propertyPath: m_Name
+      value: snowman (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6372033464896725970, guid: 9bf8de8a01fae4290862c2f823478218, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6372033464896725970, guid: 9bf8de8a01fae4290862c2f823478218, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.52
+      objectReference: {fileID: 0}
+    - target: {fileID: 6372033464896725970, guid: 9bf8de8a01fae4290862c2f823478218, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6372033464896725970, guid: 9bf8de8a01fae4290862c2f823478218, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6372033464896725970, guid: 9bf8de8a01fae4290862c2f823478218, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6372033464896725970, guid: 9bf8de8a01fae4290862c2f823478218, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6372033464896725970, guid: 9bf8de8a01fae4290862c2f823478218, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6372033464896725970, guid: 9bf8de8a01fae4290862c2f823478218, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6372033464896725970, guid: 9bf8de8a01fae4290862c2f823478218, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6372033464896725970, guid: 9bf8de8a01fae4290862c2f823478218, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6372033464896725970, guid: 9bf8de8a01fae4290862c2f823478218, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9bf8de8a01fae4290862c2f823478218, type: 3}
 --- !u!1 &921042824
 GameObject:
   m_ObjectHideFlags: 0
@@ -1814,7 +1903,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1495250094}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.52, y: -0.03, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2306,49 +2395,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -231806403087925305, guid: 9bf8de8a01fae4290862c2f823478218, type: 3}
-      propertyPath: sp
-      value: 
-      objectReference: {fileID: 7852588598872952847, guid: 9bf8de8a01fae4290862c2f823478218, type: 3}
-    - target: {fileID: -231806403087925305, guid: 9bf8de8a01fae4290862c2f823478218, type: 3}
-      propertyPath: ObsSnowman
-      value: 
-      objectReference: {fileID: 4285860274883974855, guid: 9bf8de8a01fae4290862c2f823478218, type: 3}
-    - target: {fileID: -231806403087925305, guid: 9bf8de8a01fae4290862c2f823478218, type: 3}
-      propertyPath: snowManAnimation.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: -231806403087925305, guid: 9bf8de8a01fae4290862c2f823478218, type: 3}
-      propertyPath: snowManAnimation.Array.data[0]
-      value: 
-      objectReference: {fileID: 21300000, guid: 7e8714afd06e24a659f1c041f47c2c0e, type: 3}
-    - target: {fileID: -231806403087925305, guid: 9bf8de8a01fae4290862c2f823478218, type: 3}
-      propertyPath: snowManAnimation.Array.data[1]
-      value: 
-      objectReference: {fileID: 21300000, guid: 7de047c143ae046f0be88d789286a67c, type: 3}
-    - target: {fileID: -231806403087925305, guid: 9bf8de8a01fae4290862c2f823478218, type: 3}
-      propertyPath: snowManAnimation.Array.data[2]
-      value: 
-      objectReference: {fileID: 21300000, guid: 748ec9452f3cd40d69e30be3a7c1ab99, type: 3}
-    - target: {fileID: -231806403087925305, guid: 9bf8de8a01fae4290862c2f823478218, type: 3}
-      propertyPath: snowManAnimation.Array.data[3]
-      value: 
-      objectReference: {fileID: 21300000, guid: 4ad81d05716db4b87aed79b684945781, type: 3}
     - target: {fileID: 4285860274883974855, guid: 9bf8de8a01fae4290862c2f823478218, type: 3}
       propertyPath: m_Name
-      value: snowman_left
+      value: snowman
       objectReference: {fileID: 0}
     - target: {fileID: 6372033464896725970, guid: 9bf8de8a01fae4290862c2f823478218, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6372033464896725970, guid: 9bf8de8a01fae4290862c2f823478218, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.67
+      value: -4.65
       objectReference: {fileID: 0}
     - target: {fileID: 6372033464896725970, guid: 9bf8de8a01fae4290862c2f823478218, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.89
+      value: -3.15
       objectReference: {fileID: 0}
     - target: {fileID: 6372033464896725970, guid: 9bf8de8a01fae4290862c2f823478218, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2417,15 +2478,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1185729585992143986, guid: edbcf425e6c464b3c8d633a28873b366, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1185729585992143986, guid: edbcf425e6c464b3c8d633a28873b366, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.42
+      value: -8.7
       objectReference: {fileID: 0}
     - target: {fileID: 1185729585992143986, guid: edbcf425e6c464b3c8d633a28873b366, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.19
+      value: -3.36
       objectReference: {fileID: 0}
     - target: {fileID: 1185729585992143986, guid: edbcf425e6c464b3c8d633a28873b366, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2461,7 +2522,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8675350409944160722, guid: edbcf425e6c464b3c8d633a28873b366, type: 3}
       propertyPath: m_Name
-      value: penguin_walk01
+      value: penguin
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: edbcf425e6c464b3c8d633a28873b366, type: 3}
@@ -2482,15 +2543,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6012346420668733524, guid: d2bf03c4dc730492f8d72232e430ac0c, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6012346420668733524, guid: d2bf03c4dc730492f8d72232e430ac0c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.14
+      value: -1.33
       objectReference: {fileID: 0}
     - target: {fileID: 6012346420668733524, guid: d2bf03c4dc730492f8d72232e430ac0c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.02
+      value: -1.75
       objectReference: {fileID: 0}
     - target: {fileID: 6012346420668733524, guid: d2bf03c4dc730492f8d72232e430ac0c, type: 3}
       propertyPath: m_LocalPosition.z
