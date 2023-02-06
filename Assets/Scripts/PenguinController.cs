@@ -37,9 +37,18 @@ public class PenguinController : MonoBehaviour
         // note for Katherine: you can add the walking animation here I just did normally walking for now
         }
 
-    rb2D.velocity = new Vector2(movement.x, movement.y);
+        rb2D.velocity = new Vector2(movement.x, movement.y);
         transform.right = rb2D.velocity.normalized;
 
+        // raycast looking for igloo
+        Vector2 origin = transform.position;
+        Vector2 target = new Vector2(transform.position.x + 2, transform.position.y);
+        Vector2 direction = target - origin;
+        RaycastHit2D hit = Physics2D.Raycast(origin, direction, direction.magnitude);
+        if (hit.collider != null && hit.collider.CompareTag("Finish"))
+        {
+            // sliding animation
+        }
     }
 
     void OnCollisionEnter2D(Collision2D col)

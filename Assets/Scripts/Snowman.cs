@@ -9,6 +9,8 @@ public class Snowman : MonoBehaviour
     private int index = 0;
     public Sprite[] snowManAnimation;
     public SpriteRenderer sp;
+    private float offSetX = 10;
+    public Transform player;
 
     // Start is called before the first frame update
     void Start()
@@ -25,5 +27,10 @@ public class Snowman : MonoBehaviour
             sp.sprite = snowManAnimation[index % snowManAnimation.Length];
             index++;
         }
+
+        //if (gameObject.transform.position.x < player.position.x - offSetX)
+        //{
+        //    Destroy(gameObject);
+        //}
     }
 }

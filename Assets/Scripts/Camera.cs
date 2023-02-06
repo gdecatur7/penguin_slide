@@ -17,11 +17,6 @@ public class Camera : MonoBehaviour
             pos.x = player.position.x + offsetX;
             transform.position = pos;
         }
-
-
-        //Vector3 pos = transform.position;
-        //pos.x = player.position.x + offsetX;
-        //transform.position = pos;
     }
     
 }
