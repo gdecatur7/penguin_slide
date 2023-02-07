@@ -48,7 +48,7 @@ public class Camera : MonoBehaviour
             //check for distsance (4) between igloo and camera. 10x12.
             float distance = Igloo.transform.position.x - transform.position.x;
             //Debug.Log(distance);
-            if (distance < 6)
+            if (distance < 4)
             {
                 seeIgloo = true;
                 //Debug.Log("SEE");

@@ -19,10 +19,10 @@ public class SnowmanSpawn : MonoBehaviour
 
     void Update()
     {
-        if (Camera.seeIgloo == false)
-        {
+        //if (Camera.seeIgloo == false)
+        //{
             float distanceToIgloo = igloo.transform.position.x - transform.position.x;
-            if (distanceToIgloo > 6)
+            if (distanceToIgloo > 9)
             {
                 timer -= Time.deltaTime;
                 if (timer <= 0)
@@ -35,7 +35,7 @@ public class SnowmanSpawn : MonoBehaviour
             }
 
             
-        } 
+        //} 
     }
 
     private void SpawnNewObstacle()

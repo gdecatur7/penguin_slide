@@ -34,7 +34,10 @@ public class PenguinController : MonoBehaviour
         jump = GetComponent<AudioSource>();
         startYValue = transform.position.y;
         sr.sprite = walkSprite;
-
+        if (SceneManager.GetActiveScene().name == "Level2")
+        {
+            walkingSpeed *= 2;
+        }
     }
 
     // Update is called once per frame
@@ -106,7 +109,17 @@ public class PenguinController : MonoBehaviour
 
         if (col.gameObject.CompareTag("Finish"))
         {
-            //SceneManager.LoadScene(Level2); // 
+            if (SceneManager.GetActiveScene().name == "Level1")
+            {
+                SceneManager.LoadScene("Level2");
+                SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().name);
+            }
+            else
+            {
+                SceneManager.LoadScene("EndScene");
+                SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().name);
+            }
+            
         }
     }
 }

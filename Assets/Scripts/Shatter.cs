@@ -30,7 +30,13 @@ public class Shatter : MonoBehaviour
             if (currentFrameIndex >= frames.Length)
             {
                 var spawnPos = transform.position;
-                spawnPos.x += 3;
+                //if (SceneManager.GetActiveScene().name == "Level2")
+                //{
+                //    spawnPos.x += 6;
+                //}
+                //else {
+                    spawnPos.x += 3;
+                //}
                 Destroy(gameObject);
                 Instantiate(item, spawnPos, Quaternion.identity);
                 return;
