@@ -60,14 +60,16 @@ public class PenguinController : MonoBehaviour
 
         // raycast looking for igloo
         Vector2 origin = transform.position;
-        Vector2 target = new Vector2(transform.position.x + 2, transform.position.y);
+        Vector2 target = new Vector2(transform.position.x + 3, transform.position.y);
         Vector2 direction = target - origin;
         RaycastHit2D hit = Physics2D.Raycast(origin, direction, direction.magnitude);
         if (hit.collider != null && hit.collider.CompareTag("Finish"))
         {
+            // stop spawning snowmen, iceblocks, stop camera movement
+
             // sliding animation
             slideTimer += Time.deltaTime;
-            if (slideTimer >= slideTiming)
+            if (slideTimer >= slideTiming && index < slideAnimation.Length)
             {
                 sr.sprite = slideAnimation[index];
                 index++;
