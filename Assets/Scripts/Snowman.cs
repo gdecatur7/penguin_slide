@@ -9,7 +9,7 @@ public class Snowman : MonoBehaviour
     private int index = 0;
     public Sprite[] snowManAnimation;
     public SpriteRenderer sp;
-    private float offSetX = 10;
+    //private float offSetX = 10;
     public Transform player;
     public AudioClip death;
 

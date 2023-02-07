@@ -18,7 +18,7 @@ public class PenguinController : MonoBehaviour
 
     public Sprite[] slideAnimation;
 
-    private double slideTiming = 0.3;
+    private double slideTiming = 0.5;
     private float slideTimer = 0;
     private int index = 0;
 
@@ -68,15 +68,17 @@ public class PenguinController : MonoBehaviour
         }
         else
         {
-            transform.position = new Vector2 (transform.position.x, startYValue);
+            
             //Debug.Log("SLIDE here :");
             slideTimer += Time.deltaTime;
             if (slideTimer >= slideTiming && index < slideAnimation.Length)
             {
+                transform.position = new Vector2(transform.position.x, startYValue);
                 sr.sprite = slideAnimation[index];
                 index++;
             }
         }
+
         rb2D.velocity = new Vector2(movement.x, movement.y);
         transform.right = rb2D.velocity.normalized;
     }

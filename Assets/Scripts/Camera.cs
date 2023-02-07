@@ -22,7 +22,7 @@ public class Camera : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("Hello");
+        //Debug.Log("Hello");
         if (seeIgloo == false)
         {
             Vector3 pos = transform.position;
