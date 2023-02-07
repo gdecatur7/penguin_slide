@@ -11,6 +11,7 @@ public class PenguinController : MonoBehaviour
     public Sprite jumpSprite;
     public Sprite walkSprite;
     public SpriteRenderer sr;
+    private AudioSource jump;
     Rigidbody2D rb2D;
 
     public Sprite[] slideAnimation;
@@ -28,6 +29,7 @@ public class PenguinController : MonoBehaviour
     void Start()
     {
         rb2D = GetComponent<Rigidbody2D>();
+        jump = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -42,6 +44,7 @@ public class PenguinController : MonoBehaviour
 
             if (Input.GetKey(KeyCode.Space))
             {
+                jump.Play();
                 movement.y = jumpingSpeed;
                 sr.sprite = jumpSprite;
             }
@@ -112,6 +115,7 @@ public class PenguinController : MonoBehaviour
 
         if (col.gameObject.CompareTag("item"))
         {
+            col.gameObject.GetComponent<AudioSource>().Play();
             Destroy(col.gameObject);
         }
 
@@ -122,7 +126,7 @@ public class PenguinController : MonoBehaviour
 
         if (col.gameObject.CompareTag("Finish"))
         {
-            //SceneManager.LoadScene(nextLevel); // don’t know 
+            //SceneManager.LoadScene(Level2); // 
         }
     }
 }

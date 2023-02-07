@@ -8,7 +8,6 @@ public class Shatter : MonoBehaviour
     public Sprite[] frames;
     public float framesPerSecond = 5;
     public GameObject item;
-
     SpriteRenderer spriteRenderer;
     int currentFrameIndex = 0;
     float frameTimer;
