@@ -23,6 +23,7 @@ public class PenguinController : MonoBehaviour
     private float walkTimer = 0;
     private int walkIndex = 0;
     public Sprite[] walkAnimtion;
+    private Camera camera;
 
     void Start()
     {
@@ -71,6 +72,9 @@ public class PenguinController : MonoBehaviour
                 sr.sprite = slideAnimation[index];
                 index++;
             }
+
+            // stop spawning and moving camera
+
         }
     }
 
