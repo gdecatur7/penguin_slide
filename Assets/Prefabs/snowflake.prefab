@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1598222564639357483}
   - component: {fileID: 7505076582027078920}
   - component: {fileID: 3910821752537033057}
+  - component: {fileID: 171828110385527694}
   m_Layer: 0
   m_Name: snowflake
   m_TagString: item
@@ -220,3 +221,16 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &171828110385527694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8801569819931444911}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c02d381f7fe544b999add3fa51738edd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  snowflake: {fileID: 8300000, guid: bcb65869dc6e34e1197d52b38f34c84c, type: 3}

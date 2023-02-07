@@ -11,11 +11,13 @@ public class Snowman : MonoBehaviour
     public SpriteRenderer sp;
     private float offSetX = 10;
     public Transform player;
+    public AudioClip death;
 
     // Start is called before the first frame update
     void Start()
     {
         animCounterTimer = 0;
+        death = GetComponent<AudioSource>().clip;
     }
 
     // Update is called once per frame

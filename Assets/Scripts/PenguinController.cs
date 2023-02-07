@@ -96,6 +96,7 @@ public class PenguinController : MonoBehaviour
 
         if (col.gameObject.CompareTag("enemy"))
         {
+            col.gameObject.GetComponent<AudioSource>().Play();
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
 
