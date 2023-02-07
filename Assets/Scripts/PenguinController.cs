@@ -13,6 +13,13 @@ public class PenguinController : MonoBehaviour
     public SpriteRenderer sr;
     Rigidbody2D rb2D;
 
+    public Sprite[] slideAnimation;
+
+    private double slideTiming = 0.3;
+    private float slideTimer = 0;
+    private int index = 0;
+
+
     void Start()
     {
         rb2D = GetComponent<Rigidbody2D>();
@@ -48,6 +55,12 @@ public class PenguinController : MonoBehaviour
         if (hit.collider != null && hit.collider.CompareTag("Finish"))
         {
             // sliding animation
+            slideTimer += Time.deltaTime;
+            if (slideTimer >= slideTiming)
+            {
+                sr.sprite = slideAnimation[index];
+                index++;
+            }
         }
     }
 
@@ -68,6 +81,11 @@ public class PenguinController : MonoBehaviour
         if (col.gameObject.CompareTag("enemy"))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+
+        if (col.gameObject.CompareTag("Finish"))
+        {
+            //SceneManager.LoadScene(nextLevel); // don’t know 
         }
     }
 }
