@@ -19,6 +19,10 @@ public class PenguinController : MonoBehaviour
     private float slideTimer = 0;
     private int index = 0;
 
+    private double walkTiming = 0.1;
+    private float walkTimer = 0;
+    private int walkIndex = 0;
+    public Sprite[] walkAnimtion;
 
     void Start()
     {
@@ -40,8 +44,14 @@ public class PenguinController : MonoBehaviour
         }
         else
         {
-            sr.sprite = walkSprite;
-        // note for Katherine: you can add the walking animation here I just did normally walking for now
+            //sr.sprite = walkSprite;
+            walkTimer += Time.deltaTime;
+            if (walkTimer >= walkIndex * walkTiming)
+            {
+                sr.sprite = walkAnimtion[walkIndex % walkAnimtion.Length];
+                walkIndex++;
+            }
+
         }
 
         rb2D.velocity = new Vector2(movement.x, movement.y);
