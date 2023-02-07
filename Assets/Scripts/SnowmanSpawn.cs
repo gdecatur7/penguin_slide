@@ -22,7 +22,7 @@ public class SnowmanSpawn : MonoBehaviour
         if (Camera.seeIgloo == false)
         {
             float distanceToIgloo = igloo.transform.position.x - transform.position.x;
-            if (distanceToIgloo > 4)
+            if (distanceToIgloo > 6)
             {
                 timer -= Time.deltaTime;
                 if (timer <= 0)

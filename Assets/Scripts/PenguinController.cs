@@ -24,23 +24,26 @@ public class PenguinController : MonoBehaviour
     private float walkTimer = 0;
     private int walkIndex = 0;
     public Sprite[] walkAnimtion;
-    private Camera camera;
 
+    public float startYValue;
     void Start()
     {
         rb2D = GetComponent<Rigidbody2D>();
         jump = GetComponent<AudioSource>();
+        startYValue = transform.position.y;
+        sr.sprite = walkSprite;
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        var movement = new Vector3();
+        movement.x = walkingSpeed;
+        movement.y = rb2D.velocity.y;
+
         if (Camera.seeIgloo == false)
         {
-            var movement = new Vector3();
-            movement.x = walkingSpeed;
-            movement.y = rb2D.velocity.y;
-
 
             if (Input.GetKey(KeyCode.Space))
             {
@@ -60,40 +63,10 @@ public class PenguinController : MonoBehaviour
 
             }
 
-            rb2D.velocity = new Vector2(movement.x, movement.y);
-            transform.right = rb2D.velocity.normalized;
-
-            // raycast looking for igloo
-            Vector2 origin = transform.position;
-            Vector2 target = new Vector2(transform.position.x + 5, transform.position.y);
-            Vector2 direction = target - origin;
-            RaycastHit2D hit = Physics2D.Raycast(origin, direction, direction.magnitude);
-
-
-            if (hit.collider != null && hit.collider.CompareTag("Finish"))
-            {
-                //Debug.Log("SEE IGLOO");
-
-                // sliding animation
-                slideTimer += Time.deltaTime;
-                if (slideTimer >= slideTiming && index < slideAnimation.Length)
-                {
-                    sr.sprite = slideAnimation[index];
-                    index++;
-                }
-
-     
-
-            }
-
         }
         else
         {
-            var movement = new Vector3();
-            movement.x = walkingSpeed;
-            rb2D.velocity = new Vector2(movement.x, movement.y);
-            transform.right = rb2D.velocity.normalized;
-
+            transform.position = new Vector2 (transform.position.x, startYValue);
             //Debug.Log("SLIDE here :");
             slideTimer += Time.deltaTime;
             if (slideTimer >= slideTiming && index < slideAnimation.Length)
@@ -102,7 +75,9 @@ public class PenguinController : MonoBehaviour
                 index++;
             }
         }
-     }
+        rb2D.velocity = new Vector2(movement.x, movement.y);
+        transform.right = rb2D.velocity.normalized;
+    }
 
     void OnCollisionEnter2D(Collision2D col)
     {
