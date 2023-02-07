@@ -11,7 +11,8 @@ public class SnowmanSpawn : MonoBehaviour
     private float timeMax = 7;
     private float distanceMin = 2;
     private float distanceMax = 5;
-    
+    public GameObject igloo;
+
     void Start()
     {
     }
@@ -20,14 +21,20 @@ public class SnowmanSpawn : MonoBehaviour
     {
         if (Camera.seeIgloo == false)
         {
-            timer -= Time.deltaTime;
-            if (timer <= 0)
+            float distanceToIgloo = igloo.transform.position.x - transform.position.x;
+            if (distanceToIgloo > 4)
             {
-                //Debug.Log("HERE!");
-                SpawnNewObstacle();
-                spawnTimer = Random.Range(timeMin, timeMax);
-                timer = spawnTimer;
+                timer -= Time.deltaTime;
+                if (timer <= 0)
+                {
+                    SpawnNewObstacle();
+                    spawnTimer = Random.Range(timeMin, timeMax);
+                    timer = spawnTimer;
+                }
+
             }
+
+            
         } 
     }
 

@@ -11,6 +11,7 @@ public class IceblockSpawner : MonoBehaviour
     private float timeMax = 9;
     private float distanceMin = 2;
     private float distanceMax = 5;
+    public GameObject igloo;
 
     // Start is called before the first frame update
     void Start()
@@ -21,12 +22,16 @@ public class IceblockSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timer -= Time.deltaTime;
-        if (timer <= 0)
+        float distanceToIgloo = igloo.transform.position.x - transform.position.x;
+        if (distanceToIgloo > 4)
         {
-            SpawnNewReward();
-            spawnTimer = Random.Range(timeMin, timeMax);
-            timer = spawnTimer;
+            timer -= Time.deltaTime;
+            if (timer <= 0)
+            {
+                SpawnNewReward();
+                spawnTimer = Random.Range(timeMin, timeMax);
+                timer = spawnTimer;
+            }
         }
     }
 

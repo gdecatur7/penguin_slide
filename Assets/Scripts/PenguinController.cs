@@ -69,8 +69,7 @@ public class PenguinController : MonoBehaviour
 
             if (hit.collider != null && hit.collider.CompareTag("Finish"))
             {
-                // stop spawning snowmen, iceblocks, stop camera movement
-                Debug.Log("SEE IGLOO");
+                //Debug.Log("SEE IGLOO");
 
                 // sliding animation
                 slideTimer += Time.deltaTime;
@@ -80,13 +79,19 @@ public class PenguinController : MonoBehaviour
                     index++;
                 }
 
-                // stop spawning and moving camera
+     
 
             }
 
         }
         else
         {
+            var movement = new Vector3();
+            movement.x = walkingSpeed;
+            rb2D.velocity = new Vector2(movement.x, movement.y);
+            transform.right = rb2D.velocity.normalized;
+
+            //Debug.Log("SLIDE here :");
             slideTimer += Time.deltaTime;
             if (slideTimer >= slideTiming && index < slideAnimation.Length)
             {

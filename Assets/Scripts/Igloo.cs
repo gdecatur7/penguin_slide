@@ -1,9 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Igloo : MonoBehaviour
 {
+
     // Start is called before the first frame update
     void Start()
     {
@@ -13,6 +15,6 @@ public class Igloo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

@@ -21,12 +21,15 @@ public class Snowman : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+       
         animCounterTimer += Time.deltaTime;
         if (animCounterTimer >= index * animationChangeTimer)
         {
             sp.sprite = snowManAnimation[index % snowManAnimation.Length];
             index++;
         }
+       
+
 
         //if (gameObject.transform.position.x < player.position.x - offSetX)
         //{

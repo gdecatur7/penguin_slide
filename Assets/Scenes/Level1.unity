@@ -449,6 +449,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 974051201}
   offsetX: 2
+  Igloo: {fileID: 8378494266884543880, guid: 3bcbd841571014feba19b349ae4a49db, type: 3}
 --- !u!82 &130182034
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2586,6 +2587,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ObsSnowman: {fileID: 4285860274883974855, guid: 9bf8de8a01fae4290862c2f823478218, type: 3}
+  igloo: {fileID: 1263822416}
 --- !u!1 &1950095683
 GameObject:
   m_ObjectHideFlags: 0
@@ -3033,15 +3035,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8378494266884543881, guid: 3bcbd841571014feba19b349ae4a49db, type: 3}
       propertyPath: m_SortingLayer
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 8378494266884543881, guid: 3bcbd841571014feba19b349ae4a49db, type: 3}
       propertyPath: m_SortingOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8378494266884543881, guid: 3bcbd841571014feba19b349ae4a49db, type: 3}
       propertyPath: m_SortingLayerID
-      value: 0
+      value: -6107013
       objectReference: {fileID: 0}
     - target: {fileID: 8378494266884543882, guid: 3bcbd841571014feba19b349ae4a49db, type: 3}
       propertyPath: m_RootOrder
