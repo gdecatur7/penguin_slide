@@ -12,6 +12,8 @@ public class PenguinController : MonoBehaviour
     public Sprite walkSprite;
     public SpriteRenderer sr;
     private AudioSource jump;
+    public AudioClip collect;
+    public AudioClip death;
     Rigidbody2D rb2D;
 
     public Sprite[] slideAnimation;
@@ -90,13 +92,13 @@ public class PenguinController : MonoBehaviour
 
         if (col.gameObject.CompareTag("item"))
         {
-            col.gameObject.GetComponent<AudioSource>().Play();
+            AudioSource.PlayClipAtPoint(collect, transform.position);
             Destroy(col.gameObject);
         }
 
         if (col.gameObject.CompareTag("enemy"))
         {
-            col.gameObject.GetComponent<AudioSource>().Play();
+            AudioSource.PlayClipAtPoint(collect, transform.position);
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
 

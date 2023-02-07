@@ -163,8 +163,11 @@ MonoBehaviour:
   jumpSprite: {fileID: 21300000, guid: 413c27e560db846ecae3b701aaa79631, type: 3}
   walkSprite: {fileID: 21300000, guid: bedc87840dc2940c0b16859c83dd690a, type: 3}
   sr: {fileID: 7225883832434767388}
+  collect: {fileID: 8300000, guid: bcb65869dc6e34e1197d52b38f34c84c, type: 3}
+  death: {fileID: 8300000, guid: c19635ec904354ae7aae1df123b04166, type: 3}
   slideAnimation: []
   walkAnimtion: []
+  startYValue: 0
 --- !u!82 &-5185122956698895033
 AudioSource:
   m_ObjectHideFlags: 0
