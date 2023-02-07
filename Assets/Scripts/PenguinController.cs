@@ -33,52 +33,68 @@ public class PenguinController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        var movement = new Vector3();
-        movement.x = walkingSpeed;
-        movement.y = rb2D.velocity.y;
+        if (Camera.seeIgloo == false)
+        {
+            var movement = new Vector3();
+            movement.x = walkingSpeed;
+            movement.y = rb2D.velocity.y;
 
 
-        if (Input.GetKey(KeyCode.Space))
-        {
-            movement.y = jumpingSpeed;
-            sr.sprite = jumpSprite;
-        }
-        else
-        {
-            //sr.sprite = walkSprite;
-            walkTimer += Time.deltaTime;
-            if (walkTimer >= walkIndex * walkTiming)
+            if (Input.GetKey(KeyCode.Space))
             {
-                sr.sprite = walkAnimtion[walkIndex % walkAnimtion.Length];
-                walkIndex++;
+                movement.y = jumpingSpeed;
+                sr.sprite = jumpSprite;
+            }
+            else
+            {
+                //sr.sprite = walkSprite;
+                walkTimer += Time.deltaTime;
+                if (walkTimer >= walkIndex * walkTiming)
+                {
+                    sr.sprite = walkAnimtion[walkIndex % walkAnimtion.Length];
+                    walkIndex++;
+                }
+
+            }
+
+            rb2D.velocity = new Vector2(movement.x, movement.y);
+            transform.right = rb2D.velocity.normalized;
+
+            // raycast looking for igloo
+            Vector2 origin = transform.position;
+            Vector2 target = new Vector2(transform.position.x + 5, transform.position.y);
+            Vector2 direction = target - origin;
+            RaycastHit2D hit = Physics2D.Raycast(origin, direction, direction.magnitude);
+
+
+            if (hit.collider != null && hit.collider.CompareTag("Finish"))
+            {
+                // stop spawning snowmen, iceblocks, stop camera movement
+                Debug.Log("SEE IGLOO");
+
+                // sliding animation
+                slideTimer += Time.deltaTime;
+                if (slideTimer >= slideTiming && index < slideAnimation.Length)
+                {
+                    sr.sprite = slideAnimation[index];
+                    index++;
+                }
+
+                // stop spawning and moving camera
+
             }
 
         }
-
-        rb2D.velocity = new Vector2(movement.x, movement.y);
-        transform.right = rb2D.velocity.normalized;
-
-        // raycast looking for igloo
-        Vector2 origin = transform.position;
-        Vector2 target = new Vector2(transform.position.x + 3, transform.position.y);
-        Vector2 direction = target - origin;
-        RaycastHit2D hit = Physics2D.Raycast(origin, direction, direction.magnitude);
-        if (hit.collider != null && hit.collider.CompareTag("Finish"))
+        else
         {
-            // stop spawning snowmen, iceblocks, stop camera movement
-
-            // sliding animation
             slideTimer += Time.deltaTime;
             if (slideTimer >= slideTiming && index < slideAnimation.Length)
             {
                 sr.sprite = slideAnimation[index];
                 index++;
             }
-
-            // stop spawning and moving camera
-
         }
-    }
+     }
 
     void OnCollisionEnter2D(Collision2D col)
     {

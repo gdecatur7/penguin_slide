@@ -18,14 +18,17 @@ public class SnowmanSpawn : MonoBehaviour
 
     void Update()
     {
-        timer -= Time.deltaTime;
-        if (timer <= 0)
+        if (Camera.seeIgloo == false)
         {
-            //Debug.Log("HERE!");
-            SpawnNewObstacle();
-            spawnTimer = Random.Range(timeMin, timeMax);
-            timer = spawnTimer;
-        }
+            timer -= Time.deltaTime;
+            if (timer <= 0)
+            {
+                //Debug.Log("HERE!");
+                SpawnNewObstacle();
+                spawnTimer = Random.Range(timeMin, timeMax);
+                timer = spawnTimer;
+            }
+        } 
     }
 
     private void SpawnNewObstacle()

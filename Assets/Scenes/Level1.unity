@@ -3031,6 +3031,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: igloo
       objectReference: {fileID: 0}
+    - target: {fileID: 8378494266884543881, guid: 3bcbd841571014feba19b349ae4a49db, type: 3}
+      propertyPath: m_SortingLayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8378494266884543881, guid: 3bcbd841571014feba19b349ae4a49db, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8378494266884543881, guid: 3bcbd841571014feba19b349ae4a49db, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8378494266884543882, guid: 3bcbd841571014feba19b349ae4a49db, type: 3}
       propertyPath: m_RootOrder
       value: 5
