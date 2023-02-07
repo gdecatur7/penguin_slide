@@ -14,6 +14,7 @@ public class Camera : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        seeIgloo = false;
         backgroundMusic = GetComponent<AudioSource>();
         backgroundMusic.Play();
     }
